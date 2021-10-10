@@ -26,7 +26,7 @@ const Zip = () => {
     } else {
       var text = treeHuffman.zip(formData.text)
       setTextOutput(text[0]);
-      setTextOutputCopy(text[1] + textOutput);
+      setTextOutputCopy(text[1] + text[0]);
       setSeeOutput(true);
     }
 
@@ -60,7 +60,12 @@ const Zip = () => {
           </legend>
           <label>{textOutput}</label>
           <br />
-          <button onClick={() => { navigator.clipboard.writeText(textOutputCopy) }}>
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(textOutputCopy)
+              alert("Texto Copiado")
+            }}
+          >
             Copiar
           </button>
         </div>

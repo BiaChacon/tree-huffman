@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiLogIn } from 'react-icons/fi';
+import { BsFileZip } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
@@ -14,17 +14,17 @@ const Home = () => {
           <img src={logo} alt="Tree Huffman" />
         </header>
         <main>
-          <h1>Huffman</h1>
+          <h1>Algoritmo de Huffman</h1>
           <p>Compactação de dados com árvore de huffman</p>
           <Link to="/zip">
             <span>
-              <FiLogIn />
+              <BsFileZip />
             </span>
             <strong>Compactar Texto</strong>
           </Link>
           <Link to="/unzip">
             <span>
-              <FiLogIn />
+              <BsFileZip />
             </span>
             <strong>Descompactar Texto</strong>
           </Link>

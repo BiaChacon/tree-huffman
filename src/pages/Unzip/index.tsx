@@ -56,10 +56,6 @@ const Unzip = () => {
             <h2>Texto Descompactado</h2>
           </legend>
           <label>{textOutput}</label>
-          <br />
-          <button onClick={() => { navigator.clipboard.writeText(textOutput) }}>
-            Copiar
-          </button>
         </div>
         )}
       </form>

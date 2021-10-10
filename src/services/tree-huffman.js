@@ -99,12 +99,9 @@ function HuffmanTree() {
     }
   };
 
-  this.loadFromFile = function (filename) {
-    var fs = require("fs");
-    var file = fs.readFileSync("./" + filename, "utf-8");
-    numbers = file.split(";");
-    numbers.pop(); //removendo a parte dos dados.
-
+  this.loadFromFile = function (text) {
+    numbers = text.split(";");
+    numbers.pop();
     root = this.loadPreOrder(null);
   };
 
@@ -187,7 +184,8 @@ function ZapZum() {
     var data = text.split(";");
     var palavra = data.pop();
 
-    return h.decode(palavra);
+    var saida = h.decode(palavra);
+    return saida;
   };
 }
 
